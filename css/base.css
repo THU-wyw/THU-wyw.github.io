@@ -41,7 +41,7 @@ header {
 	padding: 0;
 	margin: 0;
 	border: 1px;
-	border-color: rgb(0,102,255);
+	border-color: rgb(41,90,91);
 	border-style: outset;
 	border-radius: 5px 5px 5px 5px;
 }
@@ -62,13 +62,20 @@ header {
 	text-align: center;
 	text-decoration: none;
 	color: white;
-	background: linear-gradient(to bottom, rgb(117,151,213) 0%, rgb(47,83,149) 50%, rgb(28,49,89) 50%, rgb(117,151,213) 100%);
-}
-.menu li + li a {
-	border-left: 1px solid #AAAAAA;
+	background: linear-gradient(to bottom, rgba(128,181,150,0.7) 0%, rgba(13,41,42,0.7) 50%, rgba(7,20,22,0.7) 50%, rgba(23,55,61,0.7) 100%);
 }
 .menu a:hover {
-	color: #555555;
+	box-shadow: #000000 0px 0px 10px inset;
+	color: white;
+}
+.menu a:active {
+	box-shadow: #000000 0px 0px 10px inset;
+	background: linear-gradient(to bottom, rgba(158,211,180,0.7) 0%, rgba(43,71,42,0.7) 50%, rgba(37,50,52,0.7) 50%, rgba(53,85,91,0.7) 100%);
+	color: white;
+}
+	
+.menu li + li a {
+	border-left: 1px solid #AAAAAA;
 }
 .subtitle_container {
 	padding: 0;
@@ -113,7 +120,7 @@ article h2, aside h2 {
 	overflow: auto;
 	margin: 0 0 10px 0;
 	padding: 0 0 5px 0;
-	border-bottom: 1px solid black;
+	border-bottom: 2px black dotted;
 }
 article h3, aside h3 {
 	font-size: 16px;
@@ -130,6 +137,12 @@ article h4, aside h4 {
 	font-size: 10px;
 	color: rgb(0,0,102);
 	margin: 0;
+}
+aside h4 + h3 {
+	border-top: 1px;
+	border-top-style: dotted;
+	border-top-color: rgba(0, 0, 0, 0.7);
+	padding-top: 8px;
 }
 div.more {
 	position: absolute;
@@ -149,13 +162,13 @@ article, aside {
 	padding: 0;
 	position: relative;
 	margin: 0 0 12px 0;
-	background: rgba(199,213,237,0.5);
+	background: rgba(53,108,108,0.7);
 	text-align: justify;
 	border-radius: 10px 10px 10px 10px;
 	border: 2px;
 	border-style: outset;
-	border-color: rgb(117,151,213);
-	box-shadow: #AAAAAA;
+	border-color: rgba(20,53,60,1);
+	box-shadow: #000000 0px 0px 10px;
 }
 	
 section.two_column_body article, section.two_column_body aside {
@@ -213,9 +226,20 @@ section#foot p {
 	text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 500px) {
 div.container {
 	width: 98%;
 	margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 499px) {
+div.container {
+	width: 98%;
+	margin: 0 auto;
+}
+section.two_column_body article, section.two_column_body aside {
+	width: auto;
+	float: none;
 }
 }
