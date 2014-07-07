@@ -9,16 +9,18 @@ x.prepend(z);
 $(window).resize(function() {
 	if (document.documentElement.clientWidth < 780) {
 		var x = $('.head_c');
-		var z = $(x.children()[1]);
+		var z = $(x.children()[0]);
 		$('#head').css('height', '100px');
 		z.css('height', '50px');
-		z.addClass('clear');
+		z.addClass("clear");
+		z.addClass("clear");
 	}
 	else {
 		var x = $('.head_c');
-		var z = $(x.children()[1]);
+		var z = $(x.children()[0]);
 		$('#head').css('height', '50px');
-		z.css('height', '50px');
-		z.removeClass('clear');
+		z.css('height', '0px');
+		z.removeClass("clear");
+		z.removeClass("clear");
 	}
 });
