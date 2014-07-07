@@ -11,13 +11,15 @@ $(window).resize(function() {
 		centerColumn.css('margin-right', '0px');
 		rightColumn.css('float', 'none');
 		rightColumn.css('width', 'auto');
+		return;
 	}
-/*	else {
+	else {
 		var container = $('.box-c');
 		var rightColumn = $('.w38p');
 		var centerColumn = $('.mr39p');
 		container.prepend(rightColumn);
 		centerColumn.removeAttr('style');
 		rightColumn.removeAttr('style');
-	}*/
+		return;
+	}
 });
