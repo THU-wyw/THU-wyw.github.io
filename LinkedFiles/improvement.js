@@ -3,8 +3,8 @@ $(window).resize(function() {
 	if (document.documentElement.clientWidth < 780) {
 		var x = $('.head_c');
 		var y = x.children();
-		if (y.length == 3) {
-			var z = $('<div class="clear"/>')
+		if ($('.head_c').children().length == 3) {
+					var z = $('<div class="clear"/>')
 			z.prepend(y[0]);
 			z.append(y[1]);
 			x.prepend(z);
