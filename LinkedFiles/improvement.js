@@ -13,8 +13,7 @@ $(window).resize(function() {
 		$('#head').css('height', '100px');
 		z.css('height', '50px');
 		z.addClass("clear");
-		z.addClass("clear");
-		x.children()[1].css('-webkit-padding-start', '0px');
+		$(x.children()[1]).css('-webkit-padding-start', '0px');
 	}
 	else {
 		var x = $('.head_c');
@@ -22,7 +21,6 @@ $(window).resize(function() {
 		$('#head').css('height', '50px');
 		z.css('height', '0px');
 		z.removeClass("clear");
-		z.removeClass("clear");
-		x.children()[1].css('-webkit-padding-start', '40px');
+		$(x.children()[1]).css('-webkit-padding-start', '40px');
 	}
 });
