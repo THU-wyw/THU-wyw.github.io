@@ -12,12 +12,12 @@ $(window).resize(function() {
 		rightColumn.css('float', 'none');
 		rightColumn.css('width', 'auto');
 	}
-	else {
+/*	else {
 		var container = $('.box-c');
 		var rightColumn = $('.w38p');
 		var centerColumn = $('.mr39p');
 		container.prepend(rightColumn);
 		centerColumn.removeAttr('style');
 		rightColumn.removeAttr('style');
-	}
+	}*/
 });
