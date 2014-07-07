@@ -7,13 +7,14 @@ z.append(y[1]);
 x.prepend(z);
 
 $(window).resize(function() {
-	if (document.documentElement.clientWidth < 780) {
+	if (document.documentElement.clientWidth < 975) {
 		var x = $('.head_c');
 		var z = $(x.children()[0]);
 		$('#head').css('height', '100px');
 		z.css('height', '50px');
 		z.addClass("clear");
 		z.addClass("clear");
+		x.children()[1].css('-webkit-padding-start', '0px');
 	}
 	else {
 		var x = $('.head_c');
@@ -22,5 +23,6 @@ $(window).resize(function() {
 		z.css('height', '0px');
 		z.removeClass("clear");
 		z.removeClass("clear");
+		x.children()[1].css('-webkit-padding-start', '40px');
 	}
 });
