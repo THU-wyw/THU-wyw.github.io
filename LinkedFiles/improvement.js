@@ -1,14 +1,22 @@
 // JavaScript Document
 $(window).resize(function() {
 	if (document.documentElement.clientWidth < 780) {
-		x = $('.head_c');
-		y = x.children();
-		z = $('<div class="clear"/>')
+		var x = $('.head_c');
+		var y = x.children();
+		var z = $('<div class="clear"/>')
 		z.prepend(y[0]);
 		z.append(y[1]);
 		x.prepend(z);
 		$('#head').css('height', '100px');
 		z.css('height', '50px');
 	}
-	alert(2);
+	else {
+		var x = $('.head_c');
+		var y = x.children();
+		if (y.length == 2) {
+			y[0].remove();
+			x.prepend($(y[0]).children());	
+			$('#head').css('height', '50px');
+		}
+	}
 });
