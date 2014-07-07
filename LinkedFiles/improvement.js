@@ -7,7 +7,9 @@ $(window).resize(function() {
 		var container = $('.box-c');
 		var rightColumn = $('.w38p');
 		var centerColumn = $('.mr39p');
-		container.prepend(centerColumn);
+		if (container.first() == rightColumn) {
+			container.prepend(centerColumn);
+		}
 		centerColumn.css('margin-right', '0px');
 		rightColumn.css('float', 'none');
 		rightColumn.css('width', 'auto');
@@ -16,7 +18,9 @@ $(window).resize(function() {
 		var container = $('.box-c');
 		var rightColumn = $('.w38p');
 		var centerColumn = $('.mr39p');
-		container.prepend(rightColumn);
+		if (container.first() != rightColumn) {
+			container.prepend(rightColumn);
+		}
 		centerColumn.removeAttr('style');
 		rightColumn.removeAttr('style');
 	}
