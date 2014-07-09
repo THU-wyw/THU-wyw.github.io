@@ -12,6 +12,7 @@ function LoadImages() {
 			img.src = 'images/loading.png';
 			newPhoto.append(img);
 			newPhoto.append($('<span/>').text(ImageList[i].title));
+			$('#pic-scroll').append(newPhoto);
 		}
 		Images = new Array();
 		for (var i = 0; i < ImageList.length; i++) {
