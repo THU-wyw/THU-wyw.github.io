@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+body, html, p, h1, h2, h3, h4, h5, h6, a, div, section, article, header, footer, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: rgb(242,242,242);
+}
+header {
+	background: rgb(255,255,255);
+	border-bottom: solid 1px #CCCCCC;
+	margin-bottom: 10px;
+}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+}
+#pic-scroll {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.image-display {
+	display: none;
+}
+
+img {
+	width: 100%;
+}
