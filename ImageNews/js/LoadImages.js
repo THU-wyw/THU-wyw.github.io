@@ -119,8 +119,8 @@ function setCurrentPhoto(value) {
 }
 	
 function autoChange() {
-	if (loaded[(current + 1) % images.length]) {
-		setCurrentPhoto((current + 1) % images.length);
+	if (loaded[(current + 1) % loaded.length]) {
+		setCurrentPhoto((current + 1) % loaded.length);
 	} 
 	setTimeout("autoChange()", 1000);
 }
