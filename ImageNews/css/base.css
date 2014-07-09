@@ -24,7 +24,7 @@ header {
 }
 
 .image-display {
-	display: block;
+	display: none;
 }
 
 img {
