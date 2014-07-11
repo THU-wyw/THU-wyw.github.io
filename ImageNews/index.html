@@ -3,23 +3,46 @@
 <head>
 <meta charset="utf-8">
 <link href="css/base.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
+<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/LoadImages.js"></script>
+<script type="text/javascript" src="js/LoadComments.js"></script>
 <title>图片新闻轮播</title>
 </head>
 <body>
 <header>
 	<div class="container">
-   	  <h1>图片新闻轮播</h1>
+   	  <img src="images/title.png">
     </div>
 </header>
 <div class="container">
     <div id="pic-scroll">
-    	<a id="left-button"></a>
-        <a id="right-button"></a>
-        <ul id="image-list">
-        </ul>
+    	<a id="left-button" onClick="setCurrentPhoto((current + imageList.length - 1) % imageList.length);"></a>
+        <a id="right-button" onClick="setCurrentPhoto((current + 1) % imageList.length)"></a>
+     	<ul id="image-list"><!--
+        	<li class="image-display" style="display: block">
+            	<div class="clearfix"><img src="album/1.jpg" alt="df"></div>
+                <div class="description"><p>在让复出秀先声夺人这件事上，莫瑞泰斯皇家美术馆在世界各大美术馆中可谓无人能出其右。</p></div>
+            </li>-->
+      	</ul>
+  	</div>
+    <div id="image-button-list">
     </div>
+</div>
+<div class="container" id="comments-block">
+    <ul class="comments-nav clearfix">
+       	<li class="comments-nav-li selected">全部评论</li>
+    </ul>
+    <ul class="comments-list">
+    </ul>
+    <div id="switch-buttons">
+    	<a title="首页" onClick="loadComments(0)">首页</a>
+        <a title="上一页" onClick="loadComments(currentPage - 1)">上一页</a>
+        <a title="下一页" onClick="loadComments(currentPage + 1)"> 下一页</a>
+        <a title="尾页" onClick="loadComments(commentsList.commentsUrl.length - 1)">尾页</a>
+    </div>        
+    <div id="page-number"></div>
+</div>
 </div>
 </body>
 </html>
