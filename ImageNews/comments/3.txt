@@ -1,22 +1,22 @@
 [{
-	"portraitUrl": "../images/portraits/portrait.jpg",
+	"portraitUrl": "images/portraits/portrait.jpg",
 	"userName": "王宇炜",
-	"commentText": ["人类文明早期的发祥地有着不同的起源，世界各地都曾有过很多伟大的文明，如四大文明古国。这些文明当中，只有中国文明是没有间断过，而一直绵延到了如今的。经过融合、更新，创造了先秦的辉煌的中国民族仍旧存在；而别的文明中的人早已发生变化。", "在人类文明的早起，由于技术条件、地形的限制，各个文明之间是相互隔绝的，但是有一个奇特的现象：各个古代文明在同一时间发展起来取得文化上的突破。第二次世界大战前后，德国哲学家雅斯贝尔斯提出：公元前5世纪左右，在中国、印度、近东、希腊都突然出现了一些重要的人物和思想、文化的繁荣，如耶稣、孔子、印度各种宗教的创始人、希腊的哲学学派，这是古典文明的“轴心期”。"],
+	"commentText": ["A brave person who advocates the breaking of laws, particularly to the French. Like no others, they mastered the guillotine for lawbreakers. In modern times, the movie 'Papillon' reminds me there are some offshore locations where the French send their criminals, but hardly likely to be called 'tax havens'"],
 	"year": 2014,
-	"month": 7,
-	"date": 3
+	"month": 6,
+	"date": 24
 }, {
-	"portraitUrl": "../images/portraits/portrait.jpg",
+	"portraitUrl": "images/portraits/portrait.jpg",
 	"userName": "JavaScript",
 	"commentText": ["今天的希腊文明是如何发展起来的？考古学家的工作只到公元前一千年左右，对于之前的文明人类一无所知。"], 	
 	"year": 2014,
-	"month": 7,
-	"date": 2
+	"month": 6,
+	"date": 20
 },{
-	"portraitUrl": "../images/portraits/portrait.jpg",
+	"portraitUrl": "images/portraits/portrait.jpg",
 	"userName": "HTML",
-	"commentText": ["人类文明早期的发祥地有着不同的起源，世界各地都曾有过很多伟大的文明，如四大文明古国。这些文明当中，只有中国文明是没有间断过，而一直绵延到了如今的。经过融合、更新，创造了先秦的辉煌的中国民族仍旧存在；而别的文明中的人早已发生变化。", "在人类文明的早起，由于技术条件、地形的限制，各个文明之间是相互隔绝的，但是有一个奇特的现象：各个古代文明在同一时间发展起来取得文化上的突破。第二次世界大战前后，德国哲学家雅斯贝尔斯提出：公元前5世纪左右，在中国、印度、近东、希腊都突然出现了一些重要的人物和思想、文化的繁荣，如耶稣、孔子、印度各种宗教的创始人、希腊的哲学学派，这是古典文明的“轴心期”。"], 	
+	"commentText": ["Besides, there are hundreds of ‘niches fiscales’ or ‘tax-loopholes’ permitted in France, 468 of them in 2010, depriving the State coffers of between 50 and 73 billion euros… these include special rates of taxation for Corsica."], 	
 	"year": 2014,
-	"month": 7,
+	"month": 5,
 	"date": 1
 }]

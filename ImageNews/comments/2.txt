@@ -1,35 +1,35 @@
 [{
-	"portraitUrl": "../images/portraits/portrait.jpg",
-	"userName": "王宇炜",
-	"commentText": ["人类文明早期的发祥地有着不同的起源，世界各地都曾有过很多伟大的文明，如四大文明古国。这些文明当中，只有中国文明是没有间断过，而一直绵延到了如今的。经过融合、更新，创造了先秦的辉煌的中国民族仍旧存在；而别的文明中的人早已发生变化。", "在人类文明的早起，由于技术条件、地形的限制，各个文明之间是相互隔绝的，但是有一个奇特的现象：各个古代文明在同一时间发展起来取得文化上的突破。第二次世界大战前后，德国哲学家雅斯贝尔斯提出：公元前5世纪左右，在中国、印度、近东、希腊都突然出现了一些重要的人物和思想、文化的繁荣，如耶稣、孔子、印度各种宗教的创始人、希腊的哲学学派，这是古典文明的“轴心期”。"],
+	"portraitUrl": "images/portraits/portrait.jpg",
+	"userName": "bampbs",
+	"commentText": ["雅典和斯巴达曾经联手为希腊文明的生存与波斯作战，产生了很多西方文明史上著名的传说。希波战争还留下另外一个遗产：马拉松。尽管双方的实力非常悬殊，但是希腊取得了最终的胜利，令人惊诧。", "西方人至今仍以希波战争的关系看待国际关系，认为自己是民主的而其他国家则是野蛮的、暴力的、专制的。这体现出历史影响人们的一个重要方式，就是从过去的历史引申出一种方式来解释自己现在的行为。", "城邦时期导致希腊文明衰退的是伯罗奔尼撒战争，它发生在雅典与斯巴达之间。"],
 	"year": 2014,
 	"month": 7,
 	"date": 3
 }, {
-	"portraitUrl": "../images/portraits/portrait.jpg",
-	"userName": "JavaScript",
-	"commentText": ["今天的希腊文明是如何发展起来的？考古学家的工作只到公元前一千年左右，对于之前的文明人类一无所知。"], 	
+	"portraitUrl": "images/portraits/portrait.jpg",
+	"userName": "tmbass",
+	"commentText": ["I read the whole book. The size might be intimading but it is not a hard read.", "I don´t need to make a summary because you can find plenty on the Internet, including here. However, he barely addresses CRONY CAPITALISM, a disease in Brazil and rampant in the US. In the case of Brazil, a country he never mentions in his book (because they couldn´t get data, what a surprise...), I believe crony capitalism plays a huge role in explaining the historical inequality in the country. For example, since 51% (official data btw) of the credit is given by the government via public banks, so the friends of the king can get credit at the best rate possible (Eike Batista, for example). And those friends are already wealthy men with political connection so people with no connections in the government cannot get the same benefits. It has been the case for decades.", "Sure, I don´t agree with some of his arguments, and as I mentioned, he never really addresses crony capitalism. Moreover, he never really said who were the 50 richest families in the US (for example) a century or 50 years ago and today so we could compare, but I still think is a great read. Lots of data, I just wish Mr Piketty were able to get more data for countries Brazil, Argentina, Mexico, India but I understand it was not easy."], 	
 	"year": 2014,
 	"month": 7,
 	"date": 2
 },{
-	"portraitUrl": "../images/portraits/portrait.jpg",
-	"userName": "HTML",
-	"commentText": ["人类文明早期的发祥地有着不同的起源，世界各地都曾有过很多伟大的文明，如四大文明古国。这些文明当中，只有中国文明是没有间断过，而一直绵延到了如今的。经过融合、更新，创造了先秦的辉煌的中国民族仍旧存在；而别的文明中的人早已发生变化。", "在人类文明的早起，由于技术条件、地形的限制，各个文明之间是相互隔绝的，但是有一个奇特的现象：各个古代文明在同一时间发展起来取得文化上的突破。第二次世界大战前后，德国哲学家雅斯贝尔斯提出：公元前5世纪左右，在中国、印度、近东、希腊都突然出现了一些重要的人物和思想、文化的繁荣，如耶稣、孔子、印度各种宗教的创始人、希腊的哲学学派，这是古典文明的“轴心期”。"], 	
+	"portraitUrl": "images/portraits/portrait.jpg",
+	"userName": "guest-ssaemme",
+	"commentText": ["In a state of perfect competition, all profits are competed away. And you're right to say that businessmen seek ways to warp the market to their advantage to achieve a profit. One of the easiest ways to do this is to enlist the help of governments to grant them a monopoly outright or draft regulations which favor incumbents. Oftentimes these methods will not create benefits for consumers that outweigh their costs. But it's notable that they're a product of government intervention into a free market rather than a feature of it. And it's hard to imagine an alternative economic system that could avoid government meddling in the production or distribution of goods and services in response to the special pleading of interest groups and/or opportunities for graft.", "But companies can also create temporary profitable niches through socially beneficial means - principally product or process innovation or specialization. And I see a lot of evidence, as I'm sure you do too, that profit-seeking companies are creating consumer benefit for their customers rather than victimizing them.", "And while capitalists may bemoan their businesses being upended by creative destruction, they also participate in the marketplace as consumers and thereby benefit from that same creative destruction. And if they manage save some of their earnings, they might also benefit from producers' profits by investing in those same companies. All things considered, capitalism delivers a better standard of living than the available alternatives."], 	
 	"year": 2014,
 	"month": 7,
 	"date": 1
 },{
-	"portraitUrl": "../images/portraits/portrait.jpg",
+	"portraitUrl": "images/portraits/portrait.jpg",
 	"userName": "css",
-	"commentText": ["人类文明早期的发祥地有着不同的起源，世界各地都曾有过很多伟大的文明，如四大文明古国。这些文明当中，只有中国文明是没有间断过，而一直绵延到了如今的。经过融合、更新，创造了先秦的辉煌的中国民族仍旧存在；而别的文明中的人早已发生变化。", "在人类文明的早起，由于技术条件、地形的限制，各个文明之间是相互隔绝的，但是有一个奇特的现象：各个古代文明在同一时间发展起来取得文化上的突破。第二次世界大战前后，德国哲学家雅斯贝尔斯提出：公元前5世纪左右，在中国、印度、近东、希腊都突然出现了一些重要的人物和思想、文化的繁荣，如耶稣、孔子、印度各种宗教的创始人、希腊的哲学学派，这是古典文明的“轴心期”。"], 	
+	"commentText": ["he most alarming factor for divergence, i think is the rapidly decreasing jobs to technology. The past decade has seen a gradual, but very real decrease of the average marginal return to labor, which essentially means that growth is going on fine without the help of human labor. With 3d printing of buildings and automatic cars, and major advances in artificial intelligence, we are rapidly moving towards a situation where a fully self-sustained economy is possible without the help of human labor, or a very minimal use for it. This is the reason why the executive payrolls have become so high, now they can afford it, since there is far less amount of people. This. coupled with other strong factors for divergence, will surely overpower the forces pushing in the other direction, for convergence. This also means that only welfare economies can exist in the future, since with the lack of jobs, the corporations cannot work in an impoverished society. Such a situation with inevitably lead to major political rebellion. There is a Harvard study which said that 50 percent of all employment can be more efficiently taken over by machines in the next ten years. This means we must either force the corporations to employ people instead of machines, which may greatly reduce inefficiency. Also many corporations find a way out this by lowering the salaries."], 	
 	"year": 2014,
 	"month": 6,
 	"date": 14
 },{
-	"portraitUrl": "../images/portraits/portrait.jpg",
-	"userName": "jQuery",
-	"commentText": ["人类文明早期的发祥地有着不同的起源，世界各地都曾有过很多伟大的文明，如四大文明古国。这些文明当中，只有中国文明是没有间断过，而一直绵延到了如今的。经过融合、更新，创造了先秦的辉煌的中国民族仍旧存在；而别的文明中的人早已发生变化。", "在人类文明的早起，由于技术条件、地形的限制，各个文明之间是相互隔绝的，但是有一个奇特的现象：各个古代文明在同一时间发展起来取得文化上的突破。第二次世界大战前后，德国哲学家雅斯贝尔斯提出：公元前5世纪左右，在中国、印度、近东、希腊都突然出现了一些重要的人物和思想、文化的繁荣，如耶稣、孔子、印度各种宗教的创始人、希腊的哲学学派，这是古典文明的“轴心期”。"], 	
+	"portraitUrl": "images/portraits/portrait.jpg",
+	"userName": "tmbass",
+	"commentText": ["Struck by all the focus on Piketty being right or wrong, precise or exaggerated, an accurate or inaccurate counter, I wrote this essay to draw attention to information as the current, consequential force for wealth creation and interactive finance as a body of intellectual property addressing illiquidity, detecting risks and animating growth."], 	
 	"year": 2014,
 	"month": 6,
 	"date": 10

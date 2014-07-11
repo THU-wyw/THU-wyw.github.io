@@ -6,7 +6,7 @@ var currentPage;
 if (localStorage.currentPage == undefined) {
 	currentPage = 0;
 } else {
-	currentPage = localStorage.currentPage;
+	currentPage = - -localStorage.currentPage;
 }
 
 function initComments(s) {
