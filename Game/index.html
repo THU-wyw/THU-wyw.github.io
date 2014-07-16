@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/base.css">
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<title>游戏</title>
+</head>
+<body>
+	<div class="gamebox">
+        <canvas id="gameCanvas" width="720" height="720"></canvas>
+        <script type="text/javascript" src="js/game.js"></script>
+    	<div class="item-container">
+       	  <div class="items">
+            <div id="startMenu">
+            	<div id="title"> <img src="images/Title.png"></div>
+                <a id="start" href="#" onClick="start()">Start</a>
+                <a id="help" href="#">How To Play</a>
+            </div>
+                <div id="header">
+                    <a id="soundOn" href="#" onClick="soundOff()"><img src="images/soundOn.png"></a>
+                    <a id="soundOff" href="#" onClick="soundOn()"><img src="images/soundOff.png"></a>
+                    <a id="pause" href="#" onClick ="pause()"><img src="images/Pause.png"></a>
+                    <a id="resume" href="#"><img src="images/Continue.png"></a>
+                    <div id="timing">
+                        <div id="timing-text">Shield</div>
+                        <div id="timingbox">
+                            <div id="timingbar"></div>
+                        </div>
+                    </div>
+                    <div id="level-score"><p id="level">Level: 1</p><p id="score">Score: 0</p></div>
+                </div>
+                <!--<div class="gamePrompt">
+                	<h1>PAUSED</h1>
+                    <h2>Restart</h2>
+                    <h2>Main Menu</h2>
+                </div>-->
+          </div>
+        </div>
+        <div class="cover"></div>
+        <div class="item-container" id="prompt">
+        	<div class="items">
+            	<div id="help-list">
+                	<h2>How to play</h2>
+                	<p>
+              	</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
