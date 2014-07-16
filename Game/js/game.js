@@ -381,6 +381,7 @@ var FPS = 60; 
 var game;
 
 function start() {
+	soundControl.backMusic.currentTime = 0;
 	$('.gamePrompt').remove();
 	$('#pause').hide();
 	$('#startMenu').css('display', 'none');
@@ -525,7 +526,6 @@ function toMainMenu() {
 
 function restart() {
 	$('.cover').fadeOut();
-	soundControl.backMusic.currentTime = 0;
 	$('#prompt').fadeOut(start);
 }
 
