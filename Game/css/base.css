@@ -4,7 +4,8 @@ html {
 	height: 100%;
 }
 body {
-	background: url(../images/background.jpg);
+	background: url(../images/Back1.jpg)  no-repeat center center fixed;
+	background-size: 100% 100%;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -14,12 +15,14 @@ body {
 
 #gameCanvas {
 	margin: 0 auto;
+	margin-top: 50px;
 }
 
 .gamebox {
 	position: relative;
 	margin: 0 auto;
-	padding-top: 50px;
+	padding-top: 0;
+	padding-bottom: 0;
 	height: 100%;
 	width: 100%;
 	text-align: center;
@@ -46,24 +49,24 @@ body {
 	color: white;
 	display: none;
 }
+#header a {
+	margin-right: 20px;
+}
 #startMenu {
 	position: absolute;
-	right: 0px;
-	bottom: 100px;
-	text-align: right;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	height: 100%;
+	text-align: center;
 	display: block;
-	height: 120px;
 }
 #title {
-	position: absolute;
-	left: -560px;
-	top: -418px;
-	-webkit-transform: rotate(-15deg);
-}
-#startMenu a {
-	color: white;
-	transition: color 0.3s;
-	display: block;
+	/*-webkit-transform: rotate(-15deg);*/
+	margin-left: -116px;
+	margin-top: 200px;
+	margin-bottom: 50px;
 }
 #start {
 	font-size: 60px;
@@ -72,11 +75,16 @@ body {
 	font-size: 40px;
 	margin-top: 20px;
 }
-#startMenu a:hover {
-	color: rgb(153,153,153);
-}
 a {
 	text-decoration: none;
+	color: white;
+	display: block;
+	transition: color 0.3s;
+	text-shadow:0px -2px 10px #8A2BE2;
+}
+a:hover {
+	text-shadow:0px -2px 10px white;
+	color: #6495ED;
 }
 #pause, #resume {
 	float: left;
@@ -112,13 +120,13 @@ a {
 }
 
 #soundOff {
-	float:left;
-	display:none;
+	float: left;
+	display: none;
 }
 #timing {
 	float: left;
 	width: 500px;
-	margin-left: 40px;
+	margin-left: 0;
 }
 #timing #timing-text {
 	margin-top: 3px;
@@ -126,7 +134,7 @@ a {
 }
 #timingbox {
 	border: 1px solid white;
-	margin-left: 100px;
+	margin-left: 80px;
 	height: 10px;
 	margin-top: 10px;
 }
@@ -192,8 +200,6 @@ a {
 }
 .gamePrompt h2 a:hover{
 	text-shadow:0px -2px 10px white;
-}
-.gamePrompt a:hover {
 	color: #6495ED;
 }
 @-webkit-keyframes BestScoreIn{
@@ -228,4 +234,41 @@ a {
 	-ms-transform: rotate(-20deg);
 	-webkit-transform: rotate(-20deg);
 	-moz-transform: rotate(-20deg);
+}
+#help-list {
+	width: 400px;
+	position: absolute;
+	left: 50%;
+	border: 2px solid white;
+	margin-left: -222px;
+	top: 50%;
+	margin-top: -167px;
+	color: white;
+	padding: 20px;
+	display: none;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+#help-list h1 {
+	font: icon 24px;
+	border-bottom: 1px white solid;
+	padding-bottom: 10px;
+	margin: 0;
+}
+#author {
+	color: white;
+	font-family: "微软雅黑", "Microsoft YaHei UI", "宋体";
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+#help-list p {
+	font-family: "微软雅黑", "Microsoft YaHei UI", "宋体";
+	font-size: 16px;
+	text-align: left;
+}
+#return {
+	font-size: 20px;
 }

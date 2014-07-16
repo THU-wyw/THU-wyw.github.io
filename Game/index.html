@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/base.css">
-<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <title>游戏</title>
 </head>
 <body>
@@ -15,13 +15,14 @@
             <div id="startMenu">
             	<div id="title"> <img src="images/Title.png"></div>
                 <a id="start" href="#" onClick="start()">Start</a>
-                <a id="help" href="#">How To Play</a>
+                <a id="help" href="#" onClick="$('#help-list').show();$('#prompt').fadeIn();$('.cover').fadeIn();">How To Play</a>
+                <div id="author">制作者：王宇炜 肖翱</div>
             </div>
                 <div id="header">
-                    <a id="soundOn" href="#" onClick="soundOff()"><img src="images/soundOn.png"></a>
-                    <a id="soundOff" href="#" onClick="soundOn()"><img src="images/soundOff.png"></a>
-                    <a id="pause" href="#" onClick ="pause()"><img src="images/Pause.png"></a>
-                    <a id="resume" href="#"><img src="images/Continue.png"></a>
+                  <a id="soundOn" href="#" onClick="soundOff()"><img src="images/SoundOn.png"></a>
+                  <a id="soundOff" href="#" onClick="soundOn()"><img src="images/SoundOff.png"></a>
+                  <a id="pause" href="#" onClick ="pause()"><img src="images/Pause.png"></a>
+                  <a id="resume" href="#"><img src="images/Continue.png"></a>
                     <div id="timing">
                         <div id="timing-text">Shield</div>
                         <div id="timingbox">
@@ -41,8 +42,10 @@
         <div class="item-container" id="prompt">
         	<div class="items">
             	<div id="help-list">
-                	<h2>How to play</h2>
-                	<p>
+                	<h1>How to play</h1>
+                	<p>游戏背景：玩家驾驶的宇宙飞船<img src="images/Player.png">应该保持在最外圈轨道之内，否则飞船会落入周围的黑洞中。并且最中心的白洞会释放各种物质，包括陨石带<img src="images/ArcWeapons.png">，大陨石<img src="images/Aerolite.png">，有用物质<img src="images/Shield.png">。玩家需躲避陨石带和大陨石，同时需尽量多地吸收有用物质（会产生5秒钟的防护罩）。游戏共有5关，难度递增，最后一关没有上限，玩家可以不断刷新记录！。祝愿各位玩家能创造出一个又一个崭新的神话！</p>
+                    <p>操作方式：↑键，变轨向里面运动一层；↓键，变轨向外面运动一层；←键，逆时针运动；→键，顺时针运动。</p>
+             		<h2><a id="return" href="#" onClick="$('#prompt').fadeOut(function(){$('#help-list').hide();});$('.cover').fadeOut();">Return</a></h2>
               	</div>
             </div>
         </div>

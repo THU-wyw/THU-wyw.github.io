@@ -6,32 +6,39 @@ if (!localStorage.bestScore === undefined) {
 	localStorage.bestScore = -1;
 }
 
+var sound = 0;
+var startNumber = 0;
+
 var map = {
 	orbits: [],
 	firstRadius: 5,
 	distance: 30,	
 	orbitsNumber: 10,
 	levels: [{
-		upgradeScore: 20,
+		upgradeScore: 100,
 		speed: 1.2,
 		items: [{possibility: 0.3, create: Shield, maxNumber: 1}, {possibility: 0.3, create: Aerolite, maxNumber: 2}],
 	}, {
-		upgradeScore: 40,
-		speed: 1.4,
+		upgradeScore: 200,
+		speed: 1.8,
 		items: [{possibility: 0.2, create: Shield, maxNumber: 1}, {possibility: 0.3, create: Aerolite, maxNumber: 3}]
 	}, {
-		upgradeScore: 70,
-		speed: 1.6,
+		upgradeScore: 400,
+		speed: 2.0,
 		items: [{possibility: 0.2, create: Shield, maxNumber: 1}, {possibility: 0.5, create: Aerolite, maxNumber: 3}, {possibility: 0.3, create: ArcWeapon, maxNumber: 2}]
 	}, {
-		upgradeScore: 100,
-		speed: 1.8,
+		upgradeScore: 800,
+		speed: 2.2,
 		items: [{possibility: 0.1, create: Shield, maxNumber: 1}, {possibility: 0.4, create: Aerolite, maxNumber: 4}, {possibility: 0.3, create: ArcWeapon, maxNumber: 3}]
 	}, {
-		upgradeScore: 10000,
-		speed: 2,
+		upgradeScore: 888888,
+		speed: 3.0,
 		items: [{possibility: 0.05, create: Shield, maxNumber: 1}, {possibility: 0.3, create: Aerolite, maxNumber: 4}, {possibility: 0.4, create: ArcWeapon, maxNumber: 4}]
-	}],
+	}, {
+		upgradeScore:888988,
+		speed:3.3,
+		items: [{possibility: 0.05, create: Shield, maxNumber: 1}, {possibility: 0.3, create: Aerolite, maxNumber: 4}, {possibility: 0.4, create: ArcWeapon, maxNumber: 5}]
+	}]
 };
 
 function initial(){
@@ -163,11 +170,17 @@ Player.prototype = {
 	//draw player
 	draw: function() {
 		if (this.orbit == map.orbitsNumber) return;
-		canvas.fillStyle = 'rgb(255, 0, 0)';
-		canvas.beginPath();
-		canvas.arc(map.orbits[this.orbit].radius * Math.cos(this.angular), map.orbits[this.orbit].radius * Math.sin(this.angular), 5, 0, 2 * Math.PI);
-		canvas.closePath();
-		canvas.fill();
+			var x0 = map.orbits[this.orbit].radius * Math.cos(this.angular); 
+			var y0 = map.orbits[this.orbit].radius * Math.sin(this.angular);
+			
+			var grd = canvas.createRadialGradient(x0, y0, 0, x0, y0, 5);
+			grd.addColorStop(0, 'rgb(255, 555, 170)');
+			grd.addColorStop(1, 'rgb(255, 0, 0)');
+			canvas.fillStyle = grd;
+			canvas.beginPath();
+			canvas.arc(x0, y0, 5, 0, 2 * Math.PI);
+			canvas.closePath();
+			canvas.fill();
 		if (this.invincible) {
 			$('#timingbar').width(100 * this.invincible / (5 * FPS) +'%');
 			canvas.strokeStyle ="rgba(255, 0, 0, 0.5)";
@@ -193,11 +206,15 @@ Aerolite.prototype = {
 	constructor: Aerolite,
 	draw: function(radius) {
 		for(var j = 0; j < this.number; j++){
-			canvas.fillStyle = 'rgb(0, 255, 0)';
+			var x0 = radius * Math.cos(j * (2 * Math.PI) / this.number + this.angular); 
+			var y0 = radius * Math.sin(j * (2 * Math.PI) / this.number + this.angular);
+			
+			var grd = canvas.createRadialGradient(x0, y0, 0, x0, y0, 5);
+			grd.addColorStop(0, 'rgb(0, 168, 170)');
+			grd.addColorStop(1, 'rgb(37, 0, 199)');
+			canvas.fillStyle = grd;
 			canvas.beginPath();
-			canvas.arc(radius * Math.cos(j * (2 * Math.PI) / this.number + this.angular), 
-				radius * Math.sin(j * (2 * Math.PI) / this.number + this.angular),
-				5,0,2 * Math.PI);
+			canvas.arc(x0, y0, 5, 0, 2 * Math.PI);
 			canvas.closePath();
 			canvas.fill();
 		}
@@ -336,7 +353,7 @@ function draw() {
 	map.player.draw();
 
 	var grd = canvas.createRadialGradient(0, 0, 0, 0, 0, 100);
-	grd.addColorStop(0, 'rgba(255, 255, 255, 1)');
+	grd.addColorStop(0, 'rgba(255, 255, 255, 0.5)');
 	grd.addColorStop(1, 'rgba(0, 0, 0, 0)');
 	canvas.fillStyle = grd;
 	canvas.beginPath();
@@ -367,7 +384,14 @@ function start() {
 	$('#resume').show();
 	map.player.invincible = 5 * FPS;
 	$('#timing').show();
-	$('#soundOn').show();
+	$('#soundOn').hide();
+	$('#soundOff').hide();
+	if(sound == 0){
+	  $('#soundOn').show();
+	}
+	else{
+		$('#soundOff').show();
+	}
 	draw();
 	countDown(function() {
 		map.isPlaying = true;
@@ -379,9 +403,11 @@ function start() {
 		$('#pause').show();
 		$('#resume').hide();
 	});
-	var backgroundMusic = $('<audio loop="loop" src = "mp3/backgroundMusic.mp3" id ="bg"/>');
-	$('#header').prepend(backgroundMusic);
-	backgroundMusic[0].play();
+	if(startNumber == 0){
+	   var backgroundMusic = $('<audio loop="loop" src = "mp3/backgroundMusic.mp3" id ="bg"/>');
+	   $('#header').prepend(backgroundMusic);
+	   backgroundMusic[0].play();
+	}
 }
 
 function countDown(callback) {
@@ -411,6 +437,8 @@ function soundOff(){
 	$('#bg').remove();
 	$('#soundOn').hide();
 	$('#soundOff').show();
+	sound = 1;
+	startNumber = 1;
 }
 
 function soundOn(){
@@ -419,6 +447,7 @@ function soundOn(){
 	backgroundMusic[0].play();
 	$('#soundOff').hide();
 	$('#soundOn').show();
+	sound = 0;
 }
 
 
