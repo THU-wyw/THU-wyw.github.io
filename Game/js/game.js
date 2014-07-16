@@ -1,6 +1,11 @@
 var canvas = document.getElementById('gameCanvas').getContext('2d');
 canvas.translate(360, 360);
-var startMusic = $('<embed hidden = "true" src = "mp3/startMusic.mp3" autostart = true></embed>');
+function SoundControl() {
+	this.startMusic = document.getElementById('startMusic');
+	this.deathMusic = document.getElementById('deathMusic');
+	this.backMusic = document.getElementById('backMusic');
+}
+soundControl = new SoundControl();
 
 if (!localStorage.bestScore === undefined) {
 	localStorage.bestScore = -1;
@@ -386,10 +391,10 @@ function start() {
 	$('#timing').show();
 	$('#soundOn').hide();
 	$('#soundOff').hide();
-	if(sound == 0){
+	if(sound == 0) {
 	  $('#soundOn').show();
 	}
-	else{
+	else {
 		$('#soundOff').show();
 	}
 	draw();
@@ -400,20 +405,23 @@ function start() {
 				collision();
 				draw(); 
 			}, 1000 / FPS);
+		if (sound == 0) {
+			soundControl.backMusic.play();
+		}
 		$('#pause').show();
 		$('#resume').hide();
 	});
-	if(startNumber == 0){
-	   var backgroundMusic = $('<audio loop="loop" src = "mp3/backgroundMusic.mp3" id ="bg"/>');
-	   $('#header').prepend(backgroundMusic);
-	   backgroundMusic[0].play();
+	if (sound == 0) {
+		soundControl.backMusic.play();
 	}
 }
 
 function countDown(callback) {
-
 	var t = $('<div id="count-down"/>').text('Three');
-	$('.items:first').prepend(startMusic);
+	if (sound == 0) {
+		soundControl.startMusic.play();
+		soundControl.startMusic.currentTime = 0;
+	}
 	$('.items:first').append(t);
 	t.fadeOut(1010, function() {
 		t.text('Two');
@@ -434,17 +442,17 @@ function countDown(callback) {
 }
 
 function soundOff(){
-	$('#bg').remove();
 	$('#soundOn').hide();
 	$('#soundOff').show();
 	sound = 1;
 	startNumber = 1;
+	soundControl.backMusic.pause();
+	soundControl.startMusic.pause();
+	soundControl.deathMusic.pause();
 }
 
 function soundOn(){
-	var backgroundMusic = $('<audio loop="loop" src = "mp3/backgroundMusic.mp3" id ="bg"/>');
-	$('#header').prepend(backgroundMusic);
-	backgroundMusic[0].play();
+	soundControl.backMusic.play();
 	$('#soundOff').hide();
 	$('#soundOn').show();
 	sound = 0;
@@ -471,7 +479,9 @@ function pause() {
 		document.getElementById("sentence").innerHTML = "五体投地拜大神，撒花o（≧▽≦）o";
 	}*/
 	clearInterval(game);
-	$('#bg').remove();
+	if (sound == 0) {
+		soundControl.backMusic.pause();
+	}
 }	
 
 function collision(){
@@ -491,6 +501,9 @@ function resume() {
 		map.isPlaying = true;
 		$('#resume').removeAttr('style');
 		$('#pause').css('display', 'block');
+		if (sound == 0) {
+			soundControl.backMusic.play();
+		}
 		game = setInterval(function(){
 			update(); 
 			draw(); 
@@ -498,9 +511,6 @@ function resume() {
 			}, 1000 / FPS); 
 		});
 	});
-	var backgroundMusic = $('<audio loop="loop" src = "mp3/backgroundMusic.mp3" id ="bg"/>');
-	$('#header').prepend(backgroundMusic);
-	backgroundMusic[0].play();
 }
 
 function toMainMenu() {
@@ -515,6 +525,7 @@ function toMainMenu() {
 
 function restart() {
 	$('.cover').fadeOut();
+	soundControl.backMusic.currentTime = 0;
 	$('#prompt').fadeOut(start);
 }
 
@@ -526,8 +537,10 @@ function gameOver(){
 	var playerScore = $('<h1/>').text(map.score + "分");
 	var buttonReplay = $('<h2/>').append($('<a href="#"/>').text('Restart').one('click', restart));
 	var buttonBackToStart = $('<h2/>').append($('<a href="#"/>').text('Main Menu').one('click', toMainMenu));
-	var boomSound = $('<embed hidden = true autostart = true src = "mp3/collision.mp3"></embed>');
-	playerScore.prepend(boomSound);
+	if (sound == 0) {
+		soundControl.deathMusic.play();
+		soundControl.backMusic.pause();
+	}
 	divS.append(playerScore);
 	divS.append(buttonReplay);
 	divS.append(buttonBackToStart);
@@ -537,5 +550,4 @@ function gameOver(){
 	}
 	$('#prompt').append(divS).fadeIn();
 	$('.cover').fadeIn();
-	$('#bg').remove();
 };
