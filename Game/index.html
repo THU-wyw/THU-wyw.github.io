@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery-1.11.1.js"></script>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/base.css">
 <title>游戏</title>
@@ -14,18 +14,18 @@
         <canvas id="gameCanvas" width="720" height="720"></canvas>
         <script type="text/javascript" src="js/game.js"></script>
     	<div class="item-container">
-       	  <div class="items">
-            <div id="startMenu">
-            	<div id="title"> <img src="images/Title.png"></div>
-                <a id="start" href="#" onClick="start()">Start</a>
-                <a id="help" href="#" onClick="$('#help-list').show();$('#prompt').fadeIn();$('.cover').fadeIn();">How To Play</a>
-                <div id="author">制作者：王宇炜 肖翱</div>
-            </div>
-                <div id="header">
-                  <a id="soundOn" href="#" onClick="soundOff()"><img src="images/SoundOn.png"></a>
-                  <a id="soundOff" href="#" onClick="soundOn()"><img src="images/SoundOff.png"></a>
-                  <a id="pause" href="#" onClick ="pause()"><img src="images/Pause.png"></a>
-                  <a id="resume" href="#"><img src="images/Continue.png"></a>
+       	  	<div class="items">
+              	<div id="startMenu">
+                  	<div id="title"> <img src="images/Title.png"></div>
+                  	<a id="start" href="#" onClick="start()">Start</a>
+                  	<a id="help" href="#" onClick="$('#help-list').show();$('#prompt').fadeIn();$('.cover').fadeIn();">How To Play</a>
+                  	<div id="author">制作者：王宇炜 肖翱</div>
+              	</div>
+              	<div id="header">
+          	      	<a id="soundOn" href="#" onClick="soundOff()"><img src="images/SoundOn.png"></a>
+                  	<a id="soundOff" href="#" onClick="soundOn()"><img src="images/SoundOff.png"></a>
+                  	<a id="pause" href="#" onClick ="pause()"><img src="images/Pause.png"></a>
+                  	<a id="resume" href="#"><img src="images/Continue.png"></a>
                     <div id="timing">
                         <div id="timing-text">Shield</div>
                         <div id="timingbox">
@@ -33,13 +33,13 @@
                         </div>
                     </div>
                     <div id="level-score"><p id="level">Level: 1</p><p id="score">Score: 0</p></div>
-                </div>
+               	</div>
                 <!--<div class="gamePrompt">
                 	<h1>PAUSED</h1>
                     <h2>Restart</h2>
                     <h2>Main Menu</h2>
                 </div>-->
-          </div>
+          	</div>
         </div>
         <div class="cover"></div>
         <div class="item-container" id="prompt">

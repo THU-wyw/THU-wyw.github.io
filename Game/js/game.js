@@ -1,5 +1,7 @@
 var canvas = document.getElementById('gameCanvas').getContext('2d');
 canvas.translate(360, 360);
+var sound = 0;
+var startNumber = 0;
 function SoundControl() {
 	this.startMusic = document.getElementById('startMusic');
 	this.deathMusic = document.getElementById('deathMusic');
@@ -11,8 +13,6 @@ if (!localStorage.bestScore === undefined) {
 	localStorage.bestScore = -1;
 }
 
-var sound = 0;
-var startNumber = 0;
 
 var map = {
 	orbits: [],
@@ -421,7 +421,7 @@ function countDown(callback) {
 	var t = $('<div id="count-down"/>').text('Three');
 	if (sound == 0) {
 		soundControl.startMusic.play();
-		soundControl.startMusic.currentTime = 0;
+		soundControl.backMusic.currentTime = 0;
 	}
 	$('.items:first').append(t);
 	t.fadeOut(1010, function() {
